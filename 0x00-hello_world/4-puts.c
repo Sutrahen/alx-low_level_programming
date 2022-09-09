@@ -3,7 +3,9 @@
 /**
  * main - main block
  *
- * Return: 0
+ * puts - prints the string in the brackets
+ *
+ * Return: Always 0 (Success)
 */
 int main(void)
 {
