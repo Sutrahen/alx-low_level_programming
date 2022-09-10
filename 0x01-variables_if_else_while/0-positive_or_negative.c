@@ -3,7 +3,7 @@
 #include <time.h>
 
 /**
- * main: main block
+ * main - main block
  *
  * srand: returns a random variable 
  *
