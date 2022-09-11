@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include <stdio.h>
 /**
  * main - Entry point
@@ -9,11 +10,12 @@
 int main(void)
 {
 	char u = 'a';
-	
+
 	while (u <= 'z')
 	{
-		for (u != 'q'; u != 'e'; u++)
+		if (u != 'q' && u != 'e')
 		putchar (u);
+		u++;
 	}	
 	putchar ('\n');
 	return (0);
