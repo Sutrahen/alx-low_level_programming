@@ -1,7 +1,8 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
+
 /**
- * main - Entry point
+ * main - entry point
  *
  * putchar: writes a character
  *
@@ -16,7 +17,7 @@ int main(void)
 		if (u != 'q' && u != 'e')
 		putchar (u);
 		u++;
-	}	
+	}
 	putchar ('\n');
 	return (0);
 }
