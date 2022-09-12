@@ -1,20 +1,20 @@
-#include<stdio.h>
+#include <stdio.h>
 
 /**
- * main - main block
+ * main - Entry point
  *
- * printf - prints a desired output
- * 
- * sizeof - outputs the size of a variable
+ * printf: prints a desired output
+ *
+ * sizeof: outputs the size of a variable
  *
  * Return: Always 0 (Success)
 */
-int main(void)
+int main (void)
 {
-	printf("Size of a char:\n", sizeof(char));
-	printf("Size of an int:\n", sizeof(int));
-	printf("Size of a long int:\n", sizeof(long int));
-	printf("Size of a long long int:\n", sizeof(long long int));
-	printf("Size of a float:\n", sizeof(float));
-	return(0);
+	printf("Size of an char: %ld\n", sizeof(char));
+	printf("Size of a int: %ld\n", sizeof(int));
+	printf("Size of a long int: %ld\n", sizeof(long int));
+	printf("Size of a long long int: %ld\n", sizeof(long long int));
+	printf("Size of a float: %ld\n", sizeof(float));
+	return (0);
 }
