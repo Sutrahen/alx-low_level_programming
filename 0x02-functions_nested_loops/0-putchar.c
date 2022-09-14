@@ -9,11 +9,14 @@
 */
 int main(void)
 {
-	char c[10] = "_putchar";
+	char str[]  = "_putchar\n";
 	int n = 0;
-	while (n < 9);
+
+	while (str[n] != '\0')
 	{
-		_putchar(c[n]);
+		char c = str[n];
+
+		_putchar(c);
 		n++;
 	}
 	_putchar('\n');
