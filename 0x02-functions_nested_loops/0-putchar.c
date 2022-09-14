@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <ctype.h>
+#include "main.h"
 
 /**
  * main - Entry point
@@ -10,7 +9,13 @@
 */
 int main(void)
 {
-	int -putchar(void );
-	printf("_putchar\n");
+	char c[10] = "_putchar";
+	int n = 0;
+	while (n < 9);
+	{
+		_putchar(c[n]);
+		n++;
+	}
+	_putchar('\n');
 	return (0);
 }
