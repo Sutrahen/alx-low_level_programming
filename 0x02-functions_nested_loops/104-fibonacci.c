@@ -4,7 +4,7 @@
  * numLength - returns the length of string
  *
  * @num: operand number
- * 
+ *
  * Return: numer of digits
 */
 int numLength(int num)
