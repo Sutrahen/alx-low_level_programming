@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * main - Entry point
+ * print_alphabet - Entry point
  *
- * print_alphabet: prints out the alphabet
+ * Description: prints out the alphabet
  *
  * _putchar: outputs a single value
  *
