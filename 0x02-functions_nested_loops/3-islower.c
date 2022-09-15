@@ -5,7 +5,7 @@
  *
  * Description: Checks if a character is lower case
  *
- * _putchar: Outputs a single character it receives
+ * @c: the integer value it receives
  *
  * Return: 1 if true. 0 if false.
 */
