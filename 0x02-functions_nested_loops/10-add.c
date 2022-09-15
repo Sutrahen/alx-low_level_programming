@@ -7,8 +7,8 @@
  *
  * @n2: int 2
  *
- * Description: give tow integers, returns sum
- * 
+ * Description: give two integers, returns sum
+ *
  * Return: sum
 */
 int add(int n1, int n2)
