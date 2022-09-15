@@ -3,7 +3,7 @@
 /**
  * numLength - returns the length of string
  *
- * @num - operand number
+ * @num: operand number
  * 
  * Return: numer of digits
 */
@@ -55,7 +55,7 @@ int main(void)
 			printf(", ");
 		else
 			printf("\n");
-		i++;		
+		i++;
 	}
 	return (0);
 }
