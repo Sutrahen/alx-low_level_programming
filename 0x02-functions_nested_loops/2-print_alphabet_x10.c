@@ -16,7 +16,7 @@ void print_alphabet_x10(void)
 
 	while (n <= 9)
 	{
-		for (times ='a'; times <= 'z'; times++)
+		for (times = 'a'; times <= 'z'; times++)
 		{
 			_putchar(times);
 		}
