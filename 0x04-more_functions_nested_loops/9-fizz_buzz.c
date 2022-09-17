@@ -1,10 +1,9 @@
-#include "main.h"
 #include <stdio.h>
 
 /**
  * main - prints a custom number 1 to 100
  *
- * Return: void
+ * Return: Always 0 (Success)
 */
 int main(void)
 {
