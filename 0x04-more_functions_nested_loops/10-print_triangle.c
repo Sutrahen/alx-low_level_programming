@@ -4,30 +4,22 @@
  * print_triangle - check for a digit
  *
  * @size: integer type
- *
- * Return: void
 */
 void print_triangle(int size)
 {
-	int i = 1, j;
-
-	while (i <= size && size > 0)
+	if (size <= 0)
+		_putchar ('\n');
+	else
 	{
-		j = 0;
-		while (j < size - i)
+		int i, j;
+
+		for (i = 1; i <= size; i++)
 		{
-			_putchar(' ');
-			j++;
+			for (j = i; j < size; j++)
+				_putchar(' ');
+			for (j = 1; j <= i; j++)
+				_putchar('#');
+			_putchar('\n');
 		}
-		j = 0;
-		while (j < i)
-		{
-			_putchar('#');
-			j++;
-		}
-		_putchar('\n');
-		i++;
 	}
-	if (i == 1)
-		_putchar('\n');
 }
