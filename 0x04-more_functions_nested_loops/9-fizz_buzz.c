@@ -18,11 +18,8 @@ int main(void)
 		else if (i % 5 == 0)
 			printf("Buzz");
 		else
-			printf("%i", i);
-		if (i != 100)
-			putchar(' ');
+			printf("%d", i);
 	}
 	i++;
 	putchar('\n');
-	return (0);
 }
