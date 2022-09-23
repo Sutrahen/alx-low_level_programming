@@ -7,18 +7,20 @@
 */
 char *leet(char *s)
 {
-	int i, j;
-	char *replace;
+	char *m = "aeotl";
+	char *M = "AEOTL";
+	int x[] = {'4', '3', '0', '7', '1'};
+	int i;
+	char *p = s;
 
-	replace = "aAeEoOtTlL4433007711";
-
-	for (i = 0; s[i] != '\0'; i++)
+	while (*s != '\0')
 	{
-		for (j = 0; j <= 9; j++)
+		for (i = 0; i < 5; i++)
 		{
-			if (s[i] == replace[j])
-				s[i] = replace[j + 10];
+			if(*s == *(m + i) || *s == *(M + i))
+				*s = x[i];
 		}
+		s++;
 	}
-	return (s);
+	return (p);
 }
