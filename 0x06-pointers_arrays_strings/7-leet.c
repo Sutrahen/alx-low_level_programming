@@ -5,6 +5,7 @@
  * @s: char array string type
  * Return: s transformed
 */
+
 char *leet(char *s)
 {
 	char *m = "aeotl";
@@ -18,9 +19,11 @@ char *leet(char *s)
 		for (i = 0; i < 5; i++)
 		{
 			if(*s == *(m + i) || *s == *(M + i))
+
 				*s = x[i];
 		}
 		s++;
+
 	}
 	return (p);
 }
