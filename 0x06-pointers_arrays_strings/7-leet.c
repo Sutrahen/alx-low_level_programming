@@ -7,21 +7,19 @@
 */
 char *leet(char *s)
 {
-	int i, ii;
-	char s1[] = "aeotl";
-	char S1[] = "AEOTL";
-	char s2[] = "43071";
-
-	for (i = 0; s[i] != '\0'; i++)
+	int i = 0, j = 0;
+	char array_leet[] = {'4', '3', '1', '0', '7'};
+	char array_up[] = {'A', 'E', 'L', 'O', 'T'};
+	char array_low[] = {'a', 'e', 'l', 'o', 't'};
+	
+	while (s[i] != '\0')
 	{
-		for (ii = 0; ii < 5; ii++)
+		for (j = 0; j < 5; j++)
 		{
-			if (s[i] == s1[i] || s[i] == S1[ii])
-			{
-				s[i] = s2[ii];
-				break;
-			}
+			if (s[i] == array_low[j] || s[i] == array_up[j])
+				s[i] = array_leet[j];
 		}
+		i++;
 	}
 	return (s);
 }
