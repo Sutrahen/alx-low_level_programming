@@ -1,36 +1,23 @@
 #include "main.h"
 
 /**
- * cap_string - capitalizes all words of a string
- * @s: input string
- * Return: the pointer to dest
+ * *cap_string - function
+ * @str: Pointer
+ * Return: pointer return to function
 */
 char *cap_string(char *str)
 {
-	char sep[] = ",\t;\n; .!?\"(){}";
-	int flag, i, ii;
+	int symb[14] = {'', '\t', '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
+	int i, j;
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		flag = 0;
-
-		if (i == 0)
-			flag = 1;
-		else
+		if(str[0] >= 97 && str[0] <= 122)
+			str[0] = str[0] -32;
+		for (j = 0; j < 14; j++)
 		{
-			for (ii = 0; sep[ii] != '\0'; ii++)
-			{
-				if (str[i - 1] == sep[ii])
-				{
-					flag = 1;
-					break;
-				}
-			}
-		}
-		if (flag == 1)
-		{
-			if (str[i] <= 'z' && str[i] >= 'a')
-				str[i] -= ('a' - 'A');
+			if(str[i] >= 97 && str[i] <= 122 && str[i - 1] == symb[j])
+				str[i] = str[i] - 32;
 		}
 	}
 	return (str);
