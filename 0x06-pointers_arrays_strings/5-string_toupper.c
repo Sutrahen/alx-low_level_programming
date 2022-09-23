@@ -1,20 +1,18 @@
 #include "main.h"
-/**
-*string_toupper - fonction toupper
-*@a: pointer
-*Return: pointer in return
-*/
-char *string_toupper(char *a)
-{
-	int i = 0;
 
-	while (s[i] != '\0')
+/**
+ * string_toupper - changes all lowercase letters of a string to upperc
+ * @str: string
+ * Return: returns char
+*/
+char *string_toupper(char *str)
+{
+	int i;
+
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (a[i] > 96 && a[i] < 123)
-		{
-			a[i] -= 32;
-		}
-		i++;
+		if (str[i] >= 'a' && str[i] <= 'z')
+			str[i] = str[i] - 32;
 	}
-	return (a);                                                                                                                   
+	return (str);
 }
