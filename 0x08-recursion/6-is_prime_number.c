@@ -1,25 +1,27 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- *  wildcmp - compares the strings and returns 1 if the strings
- *  can be considered identical, otherwise return 0
- *  @sl: string to compare to
- *  @s2: string with wild character
- *  Return: on success 1
- *  on error, -1 is returned, and errno is set appropriately
+ * is_prime_number - check if n is a prime number
+ * @n: int
+ * Return: 0 or 1
  */
-int wildcmp(char *s1, char *s2)
+int is_prime_number(int n)
 {
-	if (*s1 == '\0' && *s2 == '\0')
-		return (1);
-	if (*s1 == *s2)
-		return (wildcmp(s1 + 1, s2 + 1));
-	if (*s2 == '*')
-	{
-		if (*s2 == '*' && *(s2 + 1) != '\0' && *s1 == '\0')
-			return (0);
-		if (wildcmp(s1, s2 + 1) || wildcmp(s1 + 1, s2))
+	return (check_prime(n, 2));
+}
+/**
+ * check_prime - check all number < n if they can divide int
+ * @n: int
+ * @resp: int
+ * Return: int
+ */
+int check_prime(int n, int resp)
+{
+	if (resp >= n && n > 1)
 			return (1);
-	}
-	return (0);
+	else if (n % resp == 0 || n <= 1)
+			return (0);
+	else
+			return (check_prime(n, resp + 1));
 }
