@@ -1,29 +1,25 @@
-#include "main..h"
+#include "main.h"
 
 /**
- * prime2 - Makes possible to evaluate from 1 to n
- * @a: some number as n
- * @b: number that interates from 1 to n
- * Return: on success 1
- * on error, -1 is returned, and errno is set appropriately
-*/
-int prime2(int a, int b)
+ *  wildcmp - compares the strings and returns 1 if the strings
+ *  can be considered identical, otherwise return 0
+ *  @sl: string to compare to
+ *  @s2: string with wild character
+ *  Return: on success 1
+ *  on error, -1 is returned, and errno is set appropriately
+ */
+int wildcmp(char *s1, char *s2)
 {
-	if (a == b)
+	if (*s1 == '\0' && *s2 == '\0')
 		return (1);
-	else if (a % b == 0)
-		return (0);
-	return (prime2(a, b + 1));
-}
-/**
- * is_prime_number - checks if a number is prime
- * @n: Number integer
- * Return: on success 1
- * on error, -1 is returned, and errno is set appropriately
-*/
-int is_prime_number(int n)
-{
-	if (n <= 1)
-		return (0);
-	return (prime2(n, 2));
+	if (*s1 == *s2)
+		return (wildcmp(s1 + 1, s2 + 1));
+	if (*s2 == '*')
+	{
+		if (*s2 == '*' && *(s2 + 1) != '\0' && *s1 == '\0')
+			return (0);
+		if (wildcmp(s1, s2 + 1) || wildcmp(s1 + 1, s2))
+			return (1);
+	}
+	return (0);
 }
