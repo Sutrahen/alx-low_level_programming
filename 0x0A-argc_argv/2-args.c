@@ -8,12 +8,12 @@
 */
 int main(int argc, char const *argv[])
 {
-	int i = 0;
+	int i;
 
-	while (argc--)
+	if (argc > 0)
 	{
-		printf("%\n", argv[i]);
-		i++;
+		for (i = 0; i < argc; i++)
+			printf("%s\n", argv[i]);
 	}
 	return (0);
 }
