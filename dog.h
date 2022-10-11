@@ -1,5 +1,5 @@
-#ifndef STRUCTS
-#define STRUCTS
+#ifndef DOG_H
+#define DOG_H
 /**
  * struct dog - description for a pet
  * @name: pet name
